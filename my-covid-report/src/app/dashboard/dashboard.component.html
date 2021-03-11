@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row dashboard">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 dashboard__item item-1">
+      <div class="dashboard__item-header">New Confirmed</div>
+      <div class="dashboard__item-info">{{summaryGlobal?.NewConfirmed | number}}</div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 dashboard__item item-2">
+      <div class="dashboard__item-header">New Deaths</div>
+      <div class="dashboard__item-info">{{summaryGlobal?.NewDeaths | number}}</div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 dashboard__item item-3">
+      <div class="dashboard__item-header">New Recovered</div>
+      <div class="dashboard__item-info">{{summaryGlobal?.NewRecovered | number}}</div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 dashboard__item item-4">
+      <div class="dashboard__item-header">Total Confirmed</div>
+      <div class="dashboard__item-info">{{summaryGlobal?.TotalConfirmed | number}}</div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 dashboard__item item-5">
+      <div class="dashboard__item-header">Total Deaths</div>
+      <div class="dashboard__item-info">{{summaryGlobal?.TotalDeaths | number}}</div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 dashboard__item item-6">
+      <div class="dashboard__item-header">Total Recovered</div>
+      <div class="dashboard__item-info">{{summaryGlobal?.TotalRecovered | number}}</div>
+    </div>
+  </div>
+</div>

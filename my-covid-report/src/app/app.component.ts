@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-covid-report';
+  GlobalDate: Date;
+  error: boolean = false;
+
+  summaryGlobalDate($event) {
+    this.GlobalDate = $event;
+  }
+
+  errorMessage($event) {
+    this.error = $event;
+  }
 }
