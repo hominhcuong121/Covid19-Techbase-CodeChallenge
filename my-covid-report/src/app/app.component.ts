@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-covid-report';
+  title = 'COVID 19 REPORT';
   GlobalDate: Date;
-  error: boolean = false;
+  error = false;
 
   summaryGlobalDate($event) {
     this.GlobalDate = $event;

@@ -13,9 +13,18 @@ import { CovidServiceService } from '../services/covid-service.service';
 })
 export class AllWorldComponent implements OnInit  {
 
+  tableLabel = 'Filter';
+  country = 'Country';
+  newConfirmed = 'New Confirmed';
+  totalConfirmed = 'Total Confirmed';
+  newDeaths = 'New Deaths';
+  totalDeaths = 'Total Deaths';
+  newRecovered = 'New Recovered';
+  totalRecovered = 'Total Recovered';
+  detail = 'Detail';
   allWorld = [];
   dataSource: MatTableDataSource<AllWorld>;
-  displayedColumns: string[] = ['Country', 'NewConfirmed', 'TotalConfirmed', 'NewDeaths', 'TotalDeaths', 'NewRecovered', 'TotalRecovered'];
+  displayedColumns: string[] = ['Country', 'NewConfirmed', 'TotalConfirmed', 'NewDeaths', 'TotalDeaths', 'NewRecovered', 'TotalRecovered', 'Detail'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;

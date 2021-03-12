@@ -9,6 +9,13 @@ import { CovidServiceService } from '../services/covid-service.service';
 })
 export class DashboardComponent implements OnInit {
 
+  newConfirmed = 'New Confirmed';
+  newDeaths = 'New Deaths';
+  newRecovered = 'New Recovered';
+  totalConfirmed = 'Total Confirmed';
+  totalDeaths = 'Total Deaths';
+  totalRecovered = 'Total Recovered';
+
   @Output() summaryGlobalDate = new EventEmitter();
   @Output() errorMessage = new EventEmitter();
   summaryGlobal: SummaryGobal;
@@ -24,22 +31,22 @@ export class DashboardComponent implements OnInit {
       res => {
         const summaryGlobalData = res['Global'];
         this.summaryGlobal = {
-          NewConfirmed: summaryGlobalData['NewConfirmed'],
-          TotalConfirmed: summaryGlobalData['TotalConfirmed'],
-          NewDeaths: summaryGlobalData['NewDeaths'],
-          TotalDeaths: summaryGlobalData['TotalDeaths'],
-          NewRecovered: summaryGlobalData['NewRecovered'],
-          TotalRecovered: summaryGlobalData['TotalRecovered'],
-          Date: summaryGlobalData['Date'],
+          NewConfirmed: summaryGlobalData.NewConfirmed,
+          TotalConfirmed: summaryGlobalData.TotalConfirmed,
+          NewDeaths: summaryGlobalData.NewDeaths,
+          TotalDeaths: summaryGlobalData.TotalDeaths,
+          NewRecovered: summaryGlobalData.NewRecovered,
+          TotalRecovered: summaryGlobalData.TotalRecovered,
+          Date: summaryGlobalData.Date,
         }
-        this.summaryGlobalDate.emit(summaryGlobalData['Date']);
+        this.summaryGlobalDate.emit(summaryGlobalData.Date);
       },
       error => {
-        if (error.ok == false) {
-          this.errorMessage.emit(error.ok);
+        if (error.ok === false) {
+          setTimeout(() => {
+            this.getSummaryGlobal();
+          }, 3000)
         }
-        console.log(error);
-        console.error('error caught in component');
       }
     )
   }

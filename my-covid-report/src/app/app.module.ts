@@ -13,6 +13,8 @@ import { AllWorldComponent } from './all-world/all-world.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MatInputModule } from '@angular/material/input';
     MatTableModule,
     MatFormFieldModule,
     MatPaginatorModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [CovidServiceService],
   bootstrap: [AppComponent]
