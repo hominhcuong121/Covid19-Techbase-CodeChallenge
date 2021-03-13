@@ -4,10 +4,9 @@ import { Country } from '../models/country.model';
 import { DayOneAllStatus } from '../models/day-one-all-status.model';
 import { DayOne } from '../models/day-one.model';
 import { SummaryGobal } from '../models/summary-global.model';
+import { CovidServiceService } from '../services/covid-service.service';
 
-import { CovidServiceService } from './covid-service.service';
-
-describe('CovidServiceService', () => {
+describe('DayOneComponent', () => {
   let httpTestCtrl: HttpTestingController;
   let covidService: CovidServiceService;
 

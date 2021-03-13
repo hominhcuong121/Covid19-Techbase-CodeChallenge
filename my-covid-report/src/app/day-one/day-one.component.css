@@ -1,0 +1,22 @@
+.m-t-50px {
+  margin-top: 50px;
+}
+
+.day-one-title {
+  margin-bottom: 20px;
+}
+
+.country-selection, .status-selection {
+  width: 250px;
+  margin-right: 20px;
+}
+
+.one-day-submit-button {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+}
+
+table {
+  width: 100%;
+}

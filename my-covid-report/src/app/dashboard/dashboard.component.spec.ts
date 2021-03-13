@@ -69,7 +69,7 @@ describe('DashboardComponent', () => {
       TotalDeaths: 63263,
       NewRecovered: 15405,
       TotalRecovered: 230845,
-      Date: "2020-04-05T06:37:00Z"
+      Date: '2020-04-05T06:37:00Z'
     },
     { NewConfirmed: 100282,
       TotalConfirmed: 1162857,
@@ -77,7 +77,7 @@ describe('DashboardComponent', () => {
       TotalDeaths: 63263,
       NewRecovered: 15405,
       TotalRecovered: 230845,
-      Date: "2020-04-05T06:37:00Z"
+      Date: '2020-04-05T06:37:00Z'
     }
   ];
 

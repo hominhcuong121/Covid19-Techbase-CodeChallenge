@@ -38,14 +38,15 @@ export class DashboardComponent implements OnInit {
           NewRecovered: summaryGlobalData.NewRecovered,
           TotalRecovered: summaryGlobalData.TotalRecovered,
           Date: summaryGlobalData.Date,
-        }
+        };
         this.summaryGlobalDate.emit(summaryGlobalData.Date);
       },
       error => {
         if (error.ok === false) {
+          // alert('Error while getting data, will automaticlly get every 05 seconds');
           setTimeout(() => {
             this.getSummaryGlobal();
-          }, 3000)
+          }, 5000);
         }
       }
     )

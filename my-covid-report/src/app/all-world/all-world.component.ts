@@ -21,10 +21,10 @@ export class AllWorldComponent implements OnInit  {
   totalDeaths = 'Total Deaths';
   newRecovered = 'New Recovered';
   totalRecovered = 'Total Recovered';
-  detail = 'Detail';
+  // detail = 'Detail';
   allWorld = [];
   dataSource: MatTableDataSource<AllWorld>;
-  displayedColumns: string[] = ['Country', 'NewConfirmed', 'TotalConfirmed', 'NewDeaths', 'TotalDeaths', 'NewRecovered', 'TotalRecovered', 'Detail'];
+  displayedColumns: string[] = ['Country', 'NewConfirmed', 'TotalConfirmed', 'NewDeaths', 'TotalDeaths', 'NewRecovered', 'TotalRecovered'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -53,15 +53,20 @@ export class AllWorldComponent implements OnInit  {
             TotalRecovered: country['TotalRecovered'],
             Date: country['Date'],
             Premium: country['Premium']
-          }
+          };
           this.allWorld.push(info);
-        })
+        });
         this.dataSource = new MatTableDataSource(this.allWorld);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },
       error => {
-        console.error('error caught in component');
+        if (error.ok === false) {
+          alert('Error while getting data, will automaticlly get every 05 seconds');
+          setTimeout(() => {
+            this.getSummaryGlobal();
+          }, 5000);
+        }
       }
     );
   }
