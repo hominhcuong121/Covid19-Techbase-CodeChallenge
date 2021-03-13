@@ -1,0 +1,28 @@
+.container {
+  background: linear-gradient(87deg,#f5365c 0,#f56036 100%);
+}
+
+.dashboard__item {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 15px;
+}
+
+.dashboard__item-header, .dashboard__item-info {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.dashboard__item-info {
+  height: 45px;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+.dashboard__item-header {
+  font-size: 16px;
+}
